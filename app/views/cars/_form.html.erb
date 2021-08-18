@@ -11,6 +11,18 @@
     </div>
   <% end %>
 
+  <div class="form-group">
+    <%= form.label "Car File Picture" %>
+    <%= form.file_field :car_picture %>
+
+    <% if car.car_picture.attached? %>
+      <%= form.label :remove_picture %>
+      <%= form.check_box :remove_picture %>
+    <% end %>
+  </div>
+
+  <br>
+
   <div class="field">
     <%= form.label :name %>
     <%= form.text_field :name %>
@@ -26,7 +38,11 @@
     <%= form.number_field :price %>
   </div>
 
+  <br>
+
   <div class="actions">
     <%= form.submit %>
   </div>
+
+
 <% end %>

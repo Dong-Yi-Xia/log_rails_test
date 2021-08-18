@@ -64,6 +64,6 @@ class CarsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def car_params
-      params.require(:car).permit(:name, :color, :price)
+      params.require(:car).permit(:name, :color, :price, :car_picture, :remove_picture)
     end
 end

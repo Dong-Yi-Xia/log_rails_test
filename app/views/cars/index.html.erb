@@ -19,6 +19,7 @@
         <td><%= car.name %></td>
         <td><%= car.color %></td>
         <td><%= car.price %></td>
+        <td><%= car.car_picture %></td>
         <td><%= link_to 'Show', car %></td>
         <td><%= link_to 'Edit', edit_car_path(car) %></td>
         <td><%= link_to 'Destroy', car, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -30,3 +31,8 @@
 <br>
 
 <%= link_to 'New Car', new_car_path %>
+<br>
+
+<input id="user_born_on" name="user[born_on]" type="date" min="2021-08-08"/>
+
+<input type="file"/>
