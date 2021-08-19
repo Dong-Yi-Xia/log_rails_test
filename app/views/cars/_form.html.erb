@@ -13,10 +13,33 @@
 
   <div class="form-group">
     <%= form.label "Car File Picture" %>
-    <%= form.file_field :car_picture %>
+    <%= form.file_field :car_picture, direct_upload: true, class: "fileInput" %>
 
     <% if car.car_picture.attached? %>
       <%= form.label :remove_picture %>
+      <%= image_tag @car.car_picture, class: "image_display" %>
+      <%= form.check_box :remove_picture %>
+    <% end %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label "Car File Picture" %>
+    <%= form.file_field :car_picture, direct_upload: true, class: "fileInput" %>
+
+    <% if car.car_picture.attached? %>
+      <%= form.label :remove_picture %>
+      <%= image_tag @car.car_picture, class: "image_display" %>
+      <%= form.check_box :remove_picture %>
+    <% end %>
+  </div>
+
+    <div class="form-group">
+    <%= form.label "Car File Picture" %>
+    <%= form.file_field :car_picture, direct_upload: true, class: "fileInput" %>
+
+    <% if car.car_picture.attached? %>
+      <%= form.label :remove_picture %>
+      <%= image_tag @car.car_picture, class: "image_display" %>
       <%= form.check_box :remove_picture %>
     <% end %>
   </div>

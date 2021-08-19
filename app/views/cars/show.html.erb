@@ -1,16 +1,23 @@
 <p id="notice"><%= notice %></p>
 
-<p>
+<p class="myBtn">
+  <strong>Picture:</strong>
+   <% if @car.car_picture.attached? %>
+      <%= image_tag rails_storage_redirect_path(@car.car_picture), class: "image_display" %>
+    <% end %>
+</p>
+
+<p class="myBtn">
   <strong>Name:</strong>
   <%= @car.name %>
 </p>
 
-<p>
+<p class="myBtn">
   <strong>Color:</strong>
   <%= @car.color %>
 </p>
 
-<p>
+<p class="myBtn">
   <strong>Price:</strong>
   <%= @car.price %>
 </p>
